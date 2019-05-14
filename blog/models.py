@@ -7,8 +7,8 @@ class Post(models.Model): #models.Model translates Post into a Django Model
     title = models.CharField(max_length = 200)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
-    publised_date = models.DateTimeField(blank=True, null=True)
-
+    published_date = models.DateTimeField(blank=True, null=True)
+    
     def publish(self):
         self.publised_date = timezone.now()
         self.save()
